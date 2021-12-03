@@ -1,24 +1,20 @@
 import express from 'express';
+import { Note } from './models/Notes';
 const app = express();
 app.use(express.json())
-app.post('/notes/add-note', (req, res) => {
+app.post('/notes/add-note',function(req, res){
     try{
-        console.log("Enter")
-        var color:String = req.body.color
-        console.log("Enter 1")
-        var title:String = req.body.content 
+        let color:String = req.body.color 
+        var title:String = req.body.title 
         var content:String = req.body.content 
-        var owner_id:String = req.body.content 
-        var creation_date:String = req.body.content 
-        console.log("Enter 2")
+        var owner_id:String = req.body.owner_id 
+        var creation_date:String = req.body.creation_date 
         var note = new Note(title, content,owner_id, creation_date, color)
-        console.log("Enter 3")
-        res.json(note.toString());
-        console.log("Exit")
+        res.json(note);
     }catch(err){
         if(err instanceof TypeError){
             res.send({
-                error:'Please provide following field '+ err.message
+                error:'Please provide following field => '+ err.message
             });
         }
         res.send({
