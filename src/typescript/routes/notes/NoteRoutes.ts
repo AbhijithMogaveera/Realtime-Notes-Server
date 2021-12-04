@@ -2,7 +2,8 @@ import { Note } from "../../models/Notes";
 import { Path } from "./util/Path";
 import { NotesRepoImpl } from "./NotesRepo";
 import Container, { Service } from "typedi";
-import { ExpressHelper } from "../../ExpressHelper";
+import { ExpressHelper } from "../../di/ExpressHelper";
+import "reflect-metadata";
 
 var app = Container.get(ExpressHelper).app;
 

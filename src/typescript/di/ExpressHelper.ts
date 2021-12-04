@@ -1,5 +1,6 @@
 import { Service } from "typedi";
 import express from "express";
+import "reflect-metadata";
 
 import * as core from "express-serve-static-core";
 

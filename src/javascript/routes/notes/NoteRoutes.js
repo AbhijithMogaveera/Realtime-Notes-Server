@@ -8,7 +8,8 @@ const Notes_1 = require("../../models/Notes");
 const Path_1 = require("./util/Path");
 const NotesRepo_1 = require("./NotesRepo");
 const typedi_1 = __importDefault(require("typedi"));
-const ExpressHelper_1 = require("../../ExpressHelper");
+const ExpressHelper_1 = require("../../di/ExpressHelper");
+require("reflect-metadata");
 var app = typedi_1.default.get(ExpressHelper_1.ExpressHelper).app;
 function setUpNoteRoutes() {
     addNote();
