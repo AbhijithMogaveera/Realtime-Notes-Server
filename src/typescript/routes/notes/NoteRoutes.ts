@@ -12,8 +12,10 @@ export function setUpNoteRoutes() {
   listner();
 }
 
+var port = process.env.PORT || 5000 
+
 function listner() {
-  app.listen(3000, () => {
+  app.listen(port, () => {
     console.log("The application is listening on port 3000!");
   });
 }
