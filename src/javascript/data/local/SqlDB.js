@@ -7,10 +7,9 @@ try {
         user: "admin",
         password: "admin",
         port: 5432,
-        host: "192.168.104.43",
-        database: "notes"
+        host: "192.168.191.118",
+        database: "notes",
     };
-    const conString = "postgres://abhi:abhi1234@localhost:5432/notes";
     var client = new ts_postgres_1.Client(config);
     client.connect();
     console.log((_a = client.query("SELECT level FROM DUAL CONNECT BY level <=10").rows) === null || _a === void 0 ? void 0 : _a.forEach((it) => {

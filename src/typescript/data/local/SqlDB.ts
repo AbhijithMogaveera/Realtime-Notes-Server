@@ -1,10 +1,15 @@
-import { Client, Configuration, SSLMode } from "ts-postgres";
+import { 
+    Client, 
+    Configuration, 
+    SSLMode 
+} from "ts-postgres";
+
 try{
     var config:Configuration = {
         user:"admin",
         password:"admin",
         port:5432,
-        host:"192.168.104.43",
+        host:"192.168.191.118",
         database:"notes",
     };
     

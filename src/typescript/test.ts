@@ -24,5 +24,4 @@ class ExampleService {
 
 const serviceInstance = Container.get(ExampleService);
 // we request an instance of ExampleService from TypeDI
-
 serviceInstance.injectedService.printMessage();

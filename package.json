@@ -2,11 +2,11 @@
   "name": "realtime-notes-server",
   "version": "1.0.0",
   "description": "",
-  "main": "helloworld.js",
+  "main": "src/javascript/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc --project ./|cls",
-    "start": "nodemon src/javascript/index.js"
+    "start": "node src/javascript/index.js"
   },
   "keywords": [],
   "author": "",
