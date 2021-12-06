@@ -1,5 +1,5 @@
 import { Service } from "typedi";
-import { Note } from "../../models/Notes";
+import { Note } from "../models/Notes";
 
 @Service()
 export class NotesRepoImpl implements NoteRepo {

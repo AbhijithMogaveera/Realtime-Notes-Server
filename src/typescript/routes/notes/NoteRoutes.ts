@@ -1,6 +1,6 @@
 import { Note } from "../../models/Notes";
 import { Path } from "./util/Path";
-import { NotesRepoImpl } from "./NotesRepo";
+import { NotesRepoImpl } from "../../repo/NotesRepo";
 import Container, { Service } from "typedi";
 import { ExpressHelper } from "../../di/ExpressHelper";
 import "reflect-metadata";

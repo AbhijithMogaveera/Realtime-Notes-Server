@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.setUpNoteRoutes = void 0;
 const Notes_1 = require("../../models/Notes");
 const Path_1 = require("./util/Path");
-const NotesRepo_1 = require("./NotesRepo");
+const NotesRepo_1 = require("../../repo/NotesRepo");
 const typedi_1 = __importDefault(require("typedi"));
 const ExpressHelper_1 = require("../../di/ExpressHelper");
 require("reflect-metadata");
