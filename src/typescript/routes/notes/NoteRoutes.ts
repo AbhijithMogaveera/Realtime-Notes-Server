@@ -12,7 +12,7 @@ export function setUpNoteRoutes() {
   listner();
 }
 
-var port = process.env.PORT || 5000 
+var port = process.env.PORT || 5000;
 
 function listner() {
   app.listen(port, () => {

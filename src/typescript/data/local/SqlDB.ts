@@ -1,24 +1,26 @@
 import { 
-    Client, 
-    Configuration, 
-    SSLMode 
-} from "ts-postgres";
+  Client, 
+  ClientConfig 
+} from "pg";
 
-try{
-    var config:Configuration = {
-        user:"admin",
-        password:"admin",
-        port:5432,
-        host:"192.168.191.118",
-        database:"notes",
-    };
-    
-    var client = new Client(config)
-    client.connect()
-    console.log(client.query("SELECT level FROM DUAL CONNECT BY level <=10").rows?.forEach((it)=>{it.forEach((it)=>{
-        console.log(it?.toLocaleString)
-    })}));
-    console.log()
-}catch(err){
-    console.log("abhi")
+const newLocal :ClientConfig= {
+  connectionString: "postgres://nypzfjhlpugecj:03337f885620edc443ff6fa9028609ef8a3259b9529c3b96dcb9cecca8ee232f@ec2-44-198-211-34.compute-1.amazonaws.com:5432/dejhk6va8sf4in",
+  ssl: {     
+    rejectUnauthorized: false 
+  },
+};
+
+const client = new Client(newLocal);
+
+client.connect();
+
+try {
+  client.query("SELECT * FROM User", [], (err, res) => {
+    if (err) throw err
+      console.log(res)
+  })
+} catch (err) {
+  console.log("Error")
 }
+
+console.log("Finished")
