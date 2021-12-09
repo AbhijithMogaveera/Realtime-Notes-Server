@@ -1,17 +1,21 @@
+import { assertNotUndefined } from "./Notes";
+
 class User{
     
     name:String;
     user_id:String;
-    device_id:String;
 
     constructor(
         name:String,
         user_id:String,
-        device_id:String
     ){
+
+        assertNotUndefined(name)
+        assertNotUndefined(user_id)
+
         this.name = name,
-        this.device_id = device_id,
         this.user_id  = user_id
+        
     }
 
 }

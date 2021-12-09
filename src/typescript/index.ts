@@ -1,5 +1,5 @@
 import { 
-  setUpNoteRoutes 
+  setUpNoteRoutes
 } from "./routes/notes/NoteRoutes";
 
 setUpNoteRoutes()
