@@ -18,7 +18,7 @@ export class Note{
         id:string
     ){
     
-        assertNotUndefined(title)
+        assertNotUndefined(title,"title")
         assertNotUndefined(content,"content")
         assertNotUndefined(owner_id,"owner_id")
         assertNotUndefined(creation_date,"creation_date")
